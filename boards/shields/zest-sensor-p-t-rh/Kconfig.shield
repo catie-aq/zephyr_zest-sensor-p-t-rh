@@ -1,0 +1,5 @@
+# Copyright (c) 2024 CATIE
+# SPDX-License-Identifier: Apache-2.0
+
+config SHIELD_ZEST_SENSOR_P_T_RH
+	def_bool $(shields_list_contains,zest_sensor_p-t-rh)

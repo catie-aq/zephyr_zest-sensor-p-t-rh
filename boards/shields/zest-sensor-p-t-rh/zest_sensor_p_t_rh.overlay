@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2024 CATIE
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/ {
+	aliases {
+		ams621x = &ams621x_zest_sensor_p_t_rh;
+	};
+};
+
+&sixtron_i2c {
+	status = "okay";
+
+	ams621x_zest_sensor_p_t_rh: as621x@48 {
+		compatible = "ams,as621x";
+		reg = <0x48>;
+	};
+};

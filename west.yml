@@ -1,0 +1,15 @@
+# Copyright (c) 2024 CATIE
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  remotes:
+    - name: catie-6tron
+      url-base: https://github.com/catie-aq
+
+  projects:
+    - name: ams-as621x
+      remote: catie-6tron
+      repo-path: zephyr_ams-as621x
+      revision: master
+      import:
+        path-prefix: 6tron

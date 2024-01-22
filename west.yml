@@ -11,5 +11,3 @@ manifest:
       remote: catie-6tron
       repo-path: zephyr_ams-as621x
       revision: master
-      import:
-        path-prefix: 6tron

@@ -4,7 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <zephyr/dt-bindings/gpio/sixtron-header.h>
+
 / {
+	w1: w1 {
+		compatible = "zephyr,w1-gpio";
+		gpios = <&sixtron_connector_1 DIO2 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+	};
+
 	aliases {
 		ams621x = &ams621x_zest_sensor_p_t_rh;
 	};

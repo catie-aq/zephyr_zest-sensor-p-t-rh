@@ -14,6 +14,7 @@
 
 	aliases {
 		ams621x = &ams621x_zest_sensor_p_t_rh;
+		htu21d = &htu21d_zest_sensor_p_t_rh;
 	};
 };
 
@@ -23,5 +24,10 @@
 	ams621x_zest_sensor_p_t_rh: as621x@48 {
 		compatible = "ams,as621x";
 		reg = <0x48>;
+	};
+
+	htu21d_zest_sensor_p_t_rh: htu21d@40 {
+		compatible = "te-connectivity,htu21d";
+		reg = <0x40>;
 	};
 };

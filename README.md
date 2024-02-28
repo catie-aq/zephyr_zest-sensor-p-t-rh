@@ -11,7 +11,7 @@ This board enables the following sensors:
 - [AMS AS621X driver for Zephyr OS](https://github.com/catie-aq/zephyr_ams-as621x)
 
 ## 1-Wire
-Example for 1-Wire temperature sensor DS18B20.
+A 1-Wire sensor may be connected to the J4 connector, see below for an example on how to enable an external DS18B20 temperature sensor:
 
 ```dts
 &w1 {
@@ -23,3 +23,5 @@ Example for 1-Wire temperature sensor DS18B20.
 	};
 };
 ```
+
+You can use the Zephyr OS [DS18B20 1-Wire Temperature Sensor example](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/ds18b20)

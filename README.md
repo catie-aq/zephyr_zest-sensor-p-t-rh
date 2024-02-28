@@ -1,6 +1,6 @@
 # Zest_Sensor_P-T-RH
 
-Zest_Sensor_P-T-RH board for Zephyr OS.
+Zest_Sensor_P-T-RH board support for Zephyr OS.
 
 ## 1-Wire
 Example for 1-Wire temperature sensor DS18B20.

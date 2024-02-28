@@ -24,4 +24,4 @@ A 1-Wire sensor may be connected to the J4 connector, see below for an example o
 };
 ```
 
-You can use the Zephyr OS [DS18B20 1-Wire Temperature Sensor example](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/ds18b20)
+Then, use official Zephyr OS [DS18B20 1-Wire Temperature Sensor example](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/ds18b20).

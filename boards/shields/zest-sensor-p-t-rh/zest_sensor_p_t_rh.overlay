@@ -32,7 +32,7 @@
 		reg = <0x40>;
 	};
 
-	o2smpb_02e_zest_sensor_p_t_rh: o2smpb_02e@70 {
+	o2smpb_02e_zest_sensor_p_t_rh: o2smpb-02e@70 {
 		compatible = "omron,2smpb-02e";
 		reg = <0x70>;
 	};

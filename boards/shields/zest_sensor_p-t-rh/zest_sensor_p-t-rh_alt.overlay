@@ -6,10 +6,10 @@
 
 #include <zephyr/dt-bindings/gpio/sixtron-header.h>
 
-#define PERIPHERAL_ZEST_SENSOR_P_T_RH(port) \
+#define PERIPHERAL_ZEST_SENSOR_P_T_RH_ALT(port) \
 	i2c_zest_sensor_p_t_rh_##port: &sixtron_connector_##port##_i2c {};
 
-#define DRIVERS_ZEST_SENSOR_P_T_RH(port) \
+#define DRIVERS_ZEST_SENSOR_P_T_RH_ALT(port) \
 	&i2c_zest_sensor_p_t_rh_##port { \
 		status = "okay"; \
 		o2smpb_02e_zest_sensor_p_t_rh_##port: o2smpb-02e##port@70 { \
@@ -26,11 +26,11 @@
 		}; \
 	};
 
-#define ONE_WIRE_ZEST_SENSOR_P_T_RH(port) \
+#define ONE_WIRE_ZEST_SENSOR_P_T_RH_ALT(port, w1_pin) \
 	/ { \
 		w1_zest_sensor_p_t_rh_##port: w1##port { \
 			compatible = "zephyr,w1-gpio"; \
-			gpios = <&sixtron_connector_##port DIO2 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>; \
+			gpios = <&sixtron_connector_##port w1_pin (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>; \
 			ds18b20_zest_sensor_p_t_rh_##port: ds18b20##port { \
 				compatible = "maxim,ds18b20"; \
 				status = "disabled"; \
@@ -40,7 +40,7 @@
 		}; \
 	};
 
-#define ALIASES_ZEST_SENSOR_P_T_RH(port) \
+#define ALIASES_ZEST_SENSOR_P_T_RH_ALT(port) \
 	/ { \
 		aliases { \
 			o2smpb-02e = &o2smpb_02e_zest_sensor_p_t_rh_##port; \
@@ -50,8 +50,8 @@
 		}; \
 	};
 
-#define ZEST_SENSOR_P_T_RH(port) \
-	PERIPHERAL_ZEST_SENSOR_P_T_RH(port) \
-	DRIVERS_ZEST_SENSOR_P_T_RH(port) \
-	ONE_WIRE_ZEST_SENSOR_P_T_RH(port) \
-	ALIASES_ZEST_SENSOR_P_T_RH(port)
+#define ZEST_SENSOR_P_T_RH_ALT(port, w1) \
+	PERIPHERAL_ZEST_SENSOR_P_T_RH_ALT(port) \
+	DRIVERS_ZEST_SENSOR_P_T_RH_ALT(port) \
+	ONE_WIRE_ZEST_SENSOR_P_T_RH_ALT(port, w1) \
+	ALIASES_ZEST_SENSOR_P_T_RH_ALT(port)

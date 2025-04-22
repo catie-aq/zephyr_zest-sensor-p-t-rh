@@ -14,14 +14,17 @@
 		status = "okay"; \
 		o2smpb_02e_zest_sensor_p_t_rh_##port: o2smpb-02e##port@70 { \
 			compatible = "omron,2smpb-02e"; \
+			status = "okay"; \
 			reg = <0x70>; \
 		}; \
 		ams621x_zest_sensor_p_t_rh_##port: as621x##port@48 { \
 			compatible = "ams,as621x"; \
+			status = "okay"; \
 			reg = <0x48>; \
 		}; \
 		htu21d_zest_sensor_p_t_rh_##port: htu21d##port@40 { \
 			compatible = "te-connectivity,htu21d"; \
+			status = "okay"; \
 			reg = <0x40>; \
 		}; \
 	};
@@ -40,18 +43,7 @@
 		}; \
 	};
 
-#define ALIASES_ZEST_SENSOR_P_T_RH_ALT(port) \
-	/ { \
-		aliases { \
-			o2smpb-02e = &o2smpb_02e_zest_sensor_p_t_rh_##port; \
-			ams621x = &ams621x_zest_sensor_p_t_rh_##port; \
-			htu21d = &htu21d_zest_sensor_p_t_rh_##port; \
-			w1 = &w1_zest_sensor_p_t_rh_##port; \
-		}; \
-	};
-
 #define ZEST_SENSOR_P_T_RH_ALT(port, w1) \
 	PERIPHERAL_ZEST_SENSOR_P_T_RH_ALT(port) \
 	DRIVERS_ZEST_SENSOR_P_T_RH_ALT(port) \
-	ONE_WIRE_ZEST_SENSOR_P_T_RH_ALT(port, w1) \
-	ALIASES_ZEST_SENSOR_P_T_RH_ALT(port)
+	ONE_WIRE_ZEST_SENSOR_P_T_RH_ALT(port, w1)

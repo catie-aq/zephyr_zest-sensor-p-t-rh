@@ -3,8 +3,6 @@
 
 config SHIELD_ZEST_SENSOR_P_T_RH
 	def_bool $(shields_list_contains,zest_sensor_p-t-rh)
-	select I2C
 
 config SHIELD_ZEST_SENSOR_P_T_RH_ALT
 	def_bool $(shields_list_contains,zest_sensor_p-t-rh_alt)
-	select I2C

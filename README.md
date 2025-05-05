@@ -6,22 +6,22 @@ Zest_Sensor_P-T-RH board support for Zephyr OS.
 
 This board enables the following components:
 
-- [OMRON 2SMPB-02E](https://components.omron.com/us-en/products/sensors/2SMPB-02B) digital barometric pressure sensor.
-- [AMS AS621x](https://ams.com/as621x) temperature sensor.
+- [OMRON 2SMPB-02E](https://components.omron.com/us-en/products/sensors/2SMPB-02B) digital barometric pressure sensor,
+- [AMS AS621x](https://ams.com/as621x) temperature sensor,
 - [TE-Connectivity HTU21D(F)](https://www.te.com/fr/product-CAT-HSC0004.html) relative humidity sensor.
 
 :bulb: These drivers should also be added to your workspace:
 
-- [OMRON 2SMPB-02E driver](https://github.com/catie-aq/zephyr_omron-2smpb-02e).
-- [AMS AS621X driver](https://github.com/catie-aq/zephyr_ams-as621x).
+- [OMRON 2SMPB-02E driver](https://github.com/catie-aq/zephyr_omron-2smpb-02e),
+- [AMS AS621X driver](https://github.com/catie-aq/zephyr_ams-as621x),
 - [TE Connectivity HTU21D(F) driver](https://github.com/catie-aq/zephyr_te-connectivity-htu21d).
 
 :pushpin: This shield defines:
 
-- The pressure sensor device: `o2smpb_02e_zest_sensor_p_t_rh_<port>`.
-- The temperature sensor device: `ams621x_zest_sensor_p_t_rh_<port>`.
-- The humidity sensor device: `htu21d_zest_sensor_p_t_rh_<port>`.
-- The 1-wire sensor bus: `w1_zest_sensor_p_t_rh_<port>`.
+- a pressure sensor device: `o2smpb_02e_zest_sensor_p_t_rh_<port>`,
+- a temperature sensor device: `ams621x_zest_sensor_p_t_rh_<port>`,
+- a humidity sensor device: `htu21d_zest_sensor_p_t_rh_<port>`,
+- a 1-wire sensor bus: `w1_zest_sensor_p_t_rh_<port>`.
 
 :triangular_ruler: To use this shield:
 
